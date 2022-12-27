@@ -15,6 +15,9 @@
 * keywords: chessboard, camera intrinsic matrix, distortion coefficients, RMS reprojection error
 #### [Project 7: Visual Odometry](#project-7-visual-odometry-1)
 * keywords: camera relative pose, epipolar geometry, triangulation, absolute orientation problem
+#### [Final Project: SAD-SLAM](https://github.com/MartyJan/SAD-SLAM)
+* keywords: NICE-SLAM, SA-ConvONet, Mask R-CNN
+* video: https://youtu.be/dVUWtoyijMk
 #### Note
 * Some [notes and references](#note-1) are listed at the bottom of this page. 
 
