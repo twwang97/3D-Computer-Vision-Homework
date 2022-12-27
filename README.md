@@ -23,6 +23,7 @@
 
 ---
 # Project 1: Homography Estimation
+#### Python Usage
 ```
 python3 HomographyEstimation.py --img1 images/1-b0.jpg --img2 images/1-b1.jpg --n 4 --descriptor o
 ```
@@ -41,6 +42,7 @@ python3 HomographyEstimation.py --img1 images/1-b0.jpg --img2 images/1-b1.jpg --
 ---
 
 # Project 2: Document Rectification
+#### Python Usage
 ```
 python3 DocumentRectification.py --img1 images/book1.jpg 
 ```
@@ -51,6 +53,7 @@ python3 DocumentRectification.py --img1 images/book1.jpg
 ---
 
 # Project 3: Stereo Rectification
+#### Python Usage
 ```
 python3 StereoRectification.py --img1 images/bike1.png --img2 images/bike2.png
 ```
@@ -123,6 +126,7 @@ python3 cubeDrawing.py --onlyshow 2 --videopath results/cubeVideo.mp4
 ---
 
 # Project 6: Camera Calibration
+#### Python Usage
 ```
 python3 camera_calibration.py
 ```
@@ -133,7 +137,7 @@ This program estimates the camera intrinsic matrix and the distortion coefficien
 
 ---
 # Project 7: Visual Odometry
-
+#### Python Usage
 ```
 python3 main_vo.py --imgDir frames --camParams camera_params.npy --features 1000 --trackerConfig LK_FAST --poseMethod opencv --show True
 ```
@@ -187,9 +191,10 @@ python3 transform_cube.py
 [3] Inverse Warping from [makkrnic's Github](https://github.com/makkrnic/inverse-perspective-mapping/blob/master/prototype/transform.py) <br>
 [4] (Project 3) [images](https://drive.google.com/drive/folders/15gBoik7dpRhlzmwqeSnyyZe9AnFKeioz)  <br>
 [5] Stitching Pipeline from [OpenCV](https://docs.opencv.org/3.4/d1/d46/group__stitching.html) <br>
-[6] (Project 5) [Dataset](https://drive.google.com/u/0/uc?export=download&confirm=qrVw&id=1GrCpYJFc8IZM_Uiisq6e8UxwVMFvr4AJ)  <br>
-[7] EPnP and Gauss-Newton Optimization from [WeiyanCai's Github](https://github.com/WeiyanCai/EPnP_Python)  <br>
-[8] Direct Linear Transform (DLT) from [acvictor's Github](https://github.com/acvictor/DLT/blob/master/DLT.py)  <br>
-[9] Visual Odometry from [luigifreda's github](https://github.com/luigifreda/pyslam)   <br>
-[10] Pose Recovery from [laavanyebahl's github](https://github.com/laavanyebahl/3D-Reconstruction-and-Epipolar-Geometry)   <br>
-[11] Absolute Orientation Problem in [Cyrill Stachniss's lecture notes](https://www.ipb.uni-bonn.de/html/teaching/photo12-2021/2021-pho2-08-absolute-orient.pptx.pdf)   <br>
+[6] Image Stitching from [apoorva-dave's Github](https://github.com/apoorva-dave/Image-Stitching/blob/master/image_stitching_simple.pyy)  <br>
+[7] (Project 5) [Dataset](https://drive.google.com/u/0/uc?export=download&confirm=qrVw&id=1GrCpYJFc8IZM_Uiisq6e8UxwVMFvr4AJ)  <br>
+[8] EPnP and Gauss-Newton Optimization from [WeiyanCai's Github](https://github.com/WeiyanCai/EPnP_Python)  <br>
+[9] Direct Linear Transform (DLT) from [acvictor's Github](https://github.com/acvictor/DLT/blob/master/DLT.py)  <br>
+[10] Visual Odometry from [luigifreda's github](https://github.com/luigifreda/pyslam)   <br>
+[11] Pose Recovery from [laavanyebahl's github](https://github.com/laavanyebahl/3D-Reconstruction-and-Epipolar-Geometry)   <br>
+[12] Absolute Orientation Problem in [Cyrill Stachniss's lecture notes](https://www.ipb.uni-bonn.de/html/teaching/photo12-2021/2021-pho2-08-absolute-orient.pptx.pdf)   <br>
