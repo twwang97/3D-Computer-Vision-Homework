@@ -62,11 +62,13 @@ python3 StereoRectification.py --img1 images/bike1.png --img2 images/bike2.png
 ---
 
 # Project 4: Image Stitching
-#### [Stitching Pipeline](#https://docs.opencv.org/3.4/d1/d46/group__stitching.html):
-![StitchingPipeline](results_stitching/StitchingPipeline.jpg)
+#### Python Usage
 ```
 python3 image_stitching.py --imgDir successive_images/scottsdale --outputDir results 
 ```
+#### [Stitching Pipeline](https://docs.opencv.org/3.4/d1/d46/group__stitching.html):
+![StitchingPipeline](results_stitching/StitchingPipeline.jpg)
+
 #### original three images
 ![Stitching3rawImages](results_stitching/original_3hills.png)
 
@@ -151,6 +153,10 @@ LK_FAST
 #### Trajectory: 
 ![Trajectory_vo](results_vo/traj.JPG)
 
+#### Result
+##### method: sift_root
+https://youtu.be/KiiMituKcMs
+
 ---
 
 ## Tools
@@ -177,7 +183,7 @@ python3 transform_cube.py
 [2] Homography Estimation from [hughesj919's Github](https://github.com/hughesj919/HomographyEstimation/blob/master/Homography.py) <br>
 [3] Inverse Warping from [makkrnic's Github](https://github.com/makkrnic/inverse-perspective-mapping/blob/master/prototype/transform.py) <br>
 [4] (Project 3) [images](https://drive.google.com/drive/folders/15gBoik7dpRhlzmwqeSnyyZe9AnFKeioz)  <br>
-[5] Stitching Pipeline from [opencv](https://docs.opencv.org/3.4/d1/d46/group__stitching.html) <br>
+[5] Stitching Pipeline from [OpenCV](https://docs.opencv.org/3.4/d1/d46/group__stitching.html) <br>
 [6] (Project 5) [Dataset](https://drive.google.com/u/0/uc?export=download&confirm=qrVw&id=1GrCpYJFc8IZM_Uiisq6e8UxwVMFvr4AJ)  <br>
 [7] EPnP and Gauss-Newton Optimization from [WeiyanCai's Github](https://github.com/WeiyanCai/EPnP_Python)  <br>
 [8] Direct Linear Transform (DLT) from [acvictor's Github](https://github.com/acvictor/DLT/blob/master/DLT.py)  <br>
