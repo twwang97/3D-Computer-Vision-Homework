@@ -320,12 +320,18 @@ class viewOpen3d():
                                                             [-line_scale_wh, line_scale_wh, line_scale_z], 
                                                             [-line_scale_wh, -line_scale_wh, line_scale_z], 
                                                             [line_scale_wh, -line_scale_wh, line_scale_z]]
-        # self.camera_skeleton_pts = [[0, 0, 0], [1, 1, -1], [1, -1, -1], [-1, -1, -1], [-1, 1, -1]]
         self.camera_skeleton_lines = [[0, 1], [0, 2], [0, 3], [0, 4], [1, 2], [2, 3], [3, 4], [4, 1]]
         rgb_color_code = np.array([0, 0, 0.6])
         self.camera_skeleton_colors = np.tile(rgb_color_code, (8, 1))
         self.camera_skeleton_zeros3 = np.zeros(3)
         self.camera_skeleton_scale = 0.5
+
+        mesh_example = o3d.geometry.TriangleMesh.create_coordinate_frame()
+        T = np.eye(4)
+        T[:3, :3] = mesh_example.get_rotation_matrix_from_xyz((np.pi / 3, np.pi / 6, np.pi / 4))
+        T[3, 3] = 0.6
+        print(T)
+        self.angle_of_view = T
 
         self.queue = mp.Queue()
         self.p = mp.Process(target=self.process_frames, args=(self.queue, ))
@@ -337,7 +343,6 @@ class viewOpen3d():
         model = o3d.geometry.LineSet()
         model.points = o3d.utility.Vector3dVector(self.camera_skeleton_pts)
         model.lines = o3d.utility.Vector2iVector(self.camera_skeleton_lines)
-        # model.colors = o3d.utility.Vector3dVector(self.camera_skeleton_colors)
         model.colors = o3d.utility.Vector3dVector([[1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0], 
                                                   [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1]])
         model.scale(self.camera_skeleton_scale, self.camera_skeleton_zeros3)
@@ -356,6 +361,7 @@ class viewOpen3d():
                 R, t = queue_p.get(block=False)
                 if R is not None:                    
                     model = self.draw_camera(R, t)
+                    model = model.transform(self.angle_of_view)
                     self.vis.add_geometry(model)
                     pass
             except: 
@@ -363,7 +369,6 @@ class viewOpen3d():
             keep_running = keep_running and self.vis.poll_events()
 
         self.vis.destroy_window()
-        self.p.join()
         
 
     def drawTraj(self, _r_mtx, _t_vec):
@@ -383,31 +388,4 @@ class viewOpen3d():
         self.queue.put((_r_mtx, _t_vec))
 
     def quit(self):
-        a = 1
-
-'''
-class viewOpen3d(): 
-    def __init__(self):
-
-        self.vis = o3d.visualization.Visualizer()
-        self.vis.create_window()
-
-    def draw_camera(self, rot, pos):
-        model = o3d.geometry.LineSet()
-        model.points = o3d.utility.Vector3dVector(
-            [[0, 0, 0], [1, 1, -1], [1, -1, -1], [-1, -1, -1], [-1, 1, -1]])
-        model.lines = o3d.utility.Vector2iVector(
-            [[0, 1], [0, 2], [0, 3], [0, 4], [1, 2], [2, 3], [3, 4], [4, 1]])
-        color = np.array([1, 0, 0])
-        model.colors = o3d.utility.Vector3dVector(np.tile(color, (8, 1)))
-        model.scale(0.5, np.zeros(3))
-        model.rotate(rot)
-        model.translate(pos)
-        return model
-
-    def drawTraj(self, R, t):
-        cameraSkeleton = self.draw_camera(R, t)
-        self.vis.add_geometry(cameraSkeleton)
-        return self.vis.poll_events()
-
-'''
+        self.p.join()
