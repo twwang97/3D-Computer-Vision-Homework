@@ -151,18 +151,10 @@ akaze
 LK_SHI_TOMASI
 LK_FAST
 ```
-#### Number of inliers per frame: 
-![numberOfFeatures](results_vo/numberOfFeatures.png)
 
-#### Example: LK optical flow
-![LK optical flow](results_vo/lk.png)
-
-#### Trajectory: 
-![Trajectory_vo](results_vo/traj.JPG)
-
-#### Result
-##### method: sift_root
-https://youtu.be/KiiMituKcMs
+#### Result from sift_root
+[![IMAGE_ALT_TEXT_HERE](results_vo/ScreenshotYoutube.png)](https://www.youtube.com/watch?v=HYALMOclFIc)
+https://youtu.be/HYALMOclFIc
 
 ---
 
