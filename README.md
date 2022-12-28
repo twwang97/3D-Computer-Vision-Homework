@@ -17,7 +17,7 @@
 * keywords: camera relative pose, epipolar geometry, triangulation, absolute orientation problem
 #### [Final Project: SAD-SLAM](https://github.com/MartyJan/SAD-SLAM)
 * keywords: NICE-SLAM, SA-ConvONet, Mask R-CNN
-* video: https://youtu.be/dVUWtoyijMk
+* external link: [github](https://github.com/MartyJan/SAD-SLAM), [report](https://github.com/MartyJan/SAD-SLAM/blob/main/report.pdf), [video](https://youtu.be/dVUWtoyijMk)
 #### Note
 * Some [notes and references](#note-1) are listed at the bottom of this page. 
 
@@ -152,9 +152,9 @@ LK_SHI_TOMASI
 LK_FAST
 ```
 
-#### Result from sift_root
+#### Result from sift_root: https://youtu.be/HYALMOclFIc
 [![IMAGE_ALT_TEXT_HERE](results_vo/ScreenshotYoutube.png)](https://www.youtube.com/watch?v=HYALMOclFIc)
-https://youtu.be/HYALMOclFIc
+
 
 ---
 
