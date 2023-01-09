@@ -152,7 +152,7 @@ LK_SHI_TOMASI
 LK_FAST
 ```
 
-#### Result from sift_root: https://youtu.be/HYALMOclFIc
+#### The result from ```sift_root``` is shown in this YouTube link: https://youtu.be/HYALMOclFIc
 [![IMAGE_ALT_TEXT_HERE](results_vo/ScreenshotYoutube.png)](https://www.youtube.com/watch?v=HYALMOclFIc)
 
 
