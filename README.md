@@ -1,7 +1,7 @@
 
 # 3D Computer Vision: Homework
 ## Contents
-#### [Project 1: Homography Estimation](#project-1-homography-estimation)
+#### [Project 1: Homography Estimation](#project-1-homography-estimation-1)
 * keywords: ORB, RANSAC, normalized direct linear transformation (DLT) algorithm
 #### [Project 2: Document Rectification](#project-2-document-rectification-1)
 * keywords: normalized direct linear transformation (DLT) algorithm, inverse warping (bilinear interpolation), GUI mouse click
