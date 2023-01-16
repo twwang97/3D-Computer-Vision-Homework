@@ -174,7 +174,7 @@ python3 transform_cube.py
 
 # Note
 * All output files are saved in the `results` folder. 
-* Some of projects are modified from the class of 3D Computer Vision with Deep Learning Applications (Fall 2022) at National Taiwan University.
+* Some of projects are modified from the class of 3D Computer Vision with Deep Learning Applications at National Taiwan University.
 
 ---
 
