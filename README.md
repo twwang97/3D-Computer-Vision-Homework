@@ -139,7 +139,7 @@ This program estimates the camera intrinsic matrix and the distortion coefficien
 # Project 7: Visual Odometry
 #### Python Usage
 ```
-python3 main_vo.py --imgDir frames --camParams camera_params.npy --features 1000 --trackerConfig LK_FAST --poseMethod opencv --show True
+python3 main_vo.py --imgDir input_vo_frames --camParams results_calibration/camera_params.npy --features 1000 --trackerConfig orb --poseMethod opencv --show True
 ```
 where the ```--trackerConfig``` has the following options: 
 ```
