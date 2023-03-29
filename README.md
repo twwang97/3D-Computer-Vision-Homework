@@ -95,15 +95,19 @@ python3 image_stitching.py --imgDir successive_images/scottsdale --outputDir res
 * Library: ```pygame```
 * Input: ```.obj``` files
 
-## Usage
+#### Usage
 The parameters can be modified in ```main_displayer.py```. Then run
 ```
 python3 main_displayer.py
 ```
 
-## Controls
+#### Controls
 * Movement: ```W```, ```A```, ```S```, ```D```
 * Rotation: ```←``` (left arrow) and ```→``` (right arrow)
+
+#### Displayer
+
+![cubePygame](results_displayer/cube.gif)
 
 ---
 
