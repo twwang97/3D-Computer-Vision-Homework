@@ -9,11 +9,13 @@
 * keywords: epipolar geometry, stereo processing
 #### [Project 4: Image Stitching](#project-4-image-stitching-1)
 * keywords: image stitching, image warping
-#### [Project 5: Camera Pose Estimation](#project-5-camera-pose-estimation-1)
+#### [Project 5: 3D Rasterizer](#project-5-3d-rasterizer-1)
+* keywords: rasterization, mesh, pygame
+#### [Project 6: Camera Pose Estimation](#project-6-camera-pose-estimation-1)
 * keywords: Perspective-n-Point (PnP) pose computation, DLT, EPnP, RANSAC, trajectory, augmented reality (AR)
-#### [Project 6: Camera Calibration](#project-6-camera-calibration-1)
+#### [Project 7: Camera Calibration](#project-7-camera-calibration-1)
 * keywords: chessboard, camera intrinsic matrix, distortion coefficients, RMS reprojection error
-#### [Project 7: Visual Odometry](#project-7-visual-odometry-1)
+#### [Project 8: Visual Odometry](#project-8-visual-odometry-1)
 * keywords: camera relative pose, epipolar geometry, triangulation, absolute orientation problem
 #### [Final Project: SAD-SLAM](https://github.com/MartyJan/SAD-SLAM)
 * keywords: NICE-SLAM, SA-ConvONet, Mask R-CNN
@@ -86,7 +88,26 @@ python3 image_stitching.py --imgDir successive_images/scottsdale --outputDir res
 
 ---
 
-# Project 5: Camera Pose Estimation
+# Project 5: 3D Rasterizer
+
+* Objective: To display the polygons
+* Language: Python
+* Library: ```pygame```
+* Input: ```.obj``` files
+
+## Usage
+The parameters can be modified in ```main_displayer.py```. Then run
+```
+python3 main_displayer.py
+```
+
+## Controls
+* Movement: ```W```, ```A```, ```S```, ```D```
+* Rotation: ```←``` (left arrow) and ```→``` (right arrow)
+
+---
+
+# Project 6: Camera Pose Estimation
 
 First, merge separate data inputs. 
 ```
@@ -95,7 +116,7 @@ python3 merge_data.py
 
 After runnung `merge_data.py`, please make sure that 4 pkl files, namely `images.pkl`, `point_desc.pkl`, `points3D.pkl`, and `train.pkl`, are in the `data` directory. 
 
-## Project 5-1: (camera pose) trajectory plot
+## Project 6-1: (camera pose) trajectory plot
 ```
 python3 trajectoryPlot.py --pnp epnp_gauss
 python3 trajectoryPlot.py --pnp epnp_gauss  --onlyshow 1 
@@ -115,7 +136,7 @@ python3 trajectoryPlot.py --pnp epnp_gauss  --onlyshow 1
 
 ---
 
-## Project 5-2: (camera pose) Augmented Reality (AR)
+## Project 6-2: (camera pose) Augmented Reality (AR)
 ```
 python3 cubeDrawing.py --pnp epnp_gauss --videopath results/cubeVideo.mp4
 python3 cubeDrawing.py --pnp epnp_gauss --onlyshow 1 --videopath results/cubeVideo.mp4 
@@ -125,7 +146,7 @@ python3 cubeDrawing.py --onlyshow 2 --videopath results/cubeVideo.mp4
 
 ---
 
-# Project 6: Camera Calibration
+# Project 7: Camera Calibration
 #### Python Usage
 ```
 python3 camera_calibration.py
@@ -136,7 +157,7 @@ This program estimates the camera intrinsic matrix and the distortion coefficien
 ![Relative camera poses](results_calibration/calibration_camera_pose.jpg)
 
 ---
-# Project 7: Visual Odometry
+# Project 8: Visual Odometry
 #### Python Usage
 ```
 python3 main_vo.py --imgDir input_vo_frames --camParams results_calibration/camera_params.npy --features 1000 --trackerConfig orb --poseMethod opencv --show True
@@ -185,7 +206,8 @@ python3 transform_cube.py
 [4] (Project 3) [images](https://drive.google.com/drive/folders/15gBoik7dpRhlzmwqeSnyyZe9AnFKeioz)  <br>
 [5] Stitching Pipeline from [OpenCV](https://docs.opencv.org/3.4/d1/d46/group__stitching.html) <br>
 [6] Image Stitching from [apoorva-dave's Github](https://github.com/apoorva-dave/Image-Stitching/blob/master/image_stitching_simple.pyy)  <br>
-[7] (Project 5) [Dataset](https://drive.google.com/u/0/uc?export=download&confirm=qrVw&id=1GrCpYJFc8IZM_Uiisq6e8UxwVMFvr4AJ)  <br>
+[7] (Project 5) 3D Rasterizer from [lcox74's github](https://github.com/lcox74/Py3D)  <br>
+[7] (Project 6) [Dataset](https://drive.google.com/u/0/uc?export=download&confirm=qrVw&id=1GrCpYJFc8IZM_Uiisq6e8UxwVMFvr4AJ)  <br>
 [8] EPnP and Gauss-Newton Optimization from [WeiyanCai's Github](https://github.com/WeiyanCai/EPnP_Python)  <br>
 [9] Direct Linear Transform (DLT) from [acvictor's Github](https://github.com/acvictor/DLT/blob/master/DLT.py)  <br>
 [10] Visual Odometry from [luigifreda's github](https://github.com/luigifreda/pyslam)   <br>
