@@ -31,7 +31,7 @@ def parse_args():
                         help='Your directory for the input images')
     parser.add_argument('--camParams',
     					type=str,
-                        default='camera_params.npy',
+                        default='results_calibration/realsenseD435i_camera_params.npy',
                         help='npy file for camera intrinsic matrix')
     parser.add_argument('--features',
     					type=int,
