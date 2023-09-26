@@ -186,12 +186,12 @@ LK_FAST
 
 ## Tools
 
-### Estimate the pose error (for Project 5)
+### Estimate the pose error (for [Project 6](#project-6-camera-pose-estimation-1))
 ```
 python3 poseError.py
 ```
 
-### Visualize a cube by using Open3D (for Project 5-2)
+### Visualize a cube by using Open3D (for Project 6-2)
 ```
 python3 transform_cube.py
 ```
