@@ -173,16 +173,8 @@ class VisualOdometry(object):
         self.num_inliers =  np.sum(self.mask_match)
         if kVerbose:        
             print('# matched points: ', self.num_matched_kps, ', # inliers: ', self.num_inliers)      
-        # t is estimated up to scale (i.e. the algorithm always returns ||trc||=1, we need a scale in order to recover a translation which is coherent with the previous estimated ones)
-        # absolute_scale = self.getAbsoluteScale(frame_id)
-        absolute_scale = 1 #################3##################################################################################################################################################################
-        if(absolute_scale > kAbsoluteScaleThreshold):
-            # compose absolute motion [Rwa,twa] with estimated relative motion [Rab,s*tab] (s is the scale extracted from the ground truth)
-            # [Rwb,twb] = [Rwa,twa]*[Rab,tab] = [Rwa*Rab|twa + Rwa*tab]
-            if kVerbose:     
-                print('estimated t with norm |t|: ', np.linalg.norm(t), ' (just for sake of clarity)')
-            self.cur_t = self.cur_t + absolute_scale*self.cur_R.dot(t) 
-            self.cur_R = self.cur_R.dot(R)       
+        self.cur_t = self.cur_t + self.cur_R.dot(t) 
+        self.cur_R = self.cur_R.dot(R)       
         # draw image         
         self.draw_img = self.drawFeatureTracks(self.cur_image) 
         # check if we have enough features to track otherwise detect new ones and start tracking from them (used for LK tracker) 
